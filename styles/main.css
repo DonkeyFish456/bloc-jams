@@ -64,6 +64,8 @@ body {
 .links-container .navbar-link:active {
 	color: rgb(233,50,117);
 	background-color: white;
+	z-index: 0; /*added so navbar container doesnt overlap hero container*/
+	
 }
 
 .container {
