@@ -1,3 +1,9 @@
+*, *::before, *::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: corder-box;
+	box-sizing: border-box;
+}
+
 html {
 	height: 100%;
 	font-size: 100%
@@ -9,9 +15,7 @@ body {
 	min-height: 100%;
 }
 
-body.landing {
-	background-color: rgb(58,23,63);
-}
+
 
 .navbar {
 	padding: 0.5rem;
@@ -24,63 +28,42 @@ body.landing {
 	left: 2rem
 }
 
-.hero-content {
-	position: relative;
-	min-height: 600px;
-	background-image: url(../assets/images/bloc_jams_bg.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+.container {
+	margin: 0 auto;
+	max-width: 64rem;
 }
 
-.hero-content .hero-title {
-	position: absolute;
-	top: 40%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	width: 100%;
-	text-align: center;
-	font-size: 4rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 0.5rem;
-	text-shadow: 1px 1px 0px rgb(58,23,63);
-		
-}
-
-.selling-points {
-	position: relative;
-	display: table;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
-}
-
-.point {
-	display: table-cell;
-	position: relative;
-	width: 33.3%;
-	padding: 2rem;
-	text-align: center;
+@media (min-width: 640px) {
+	html { font-size: 112%;}
+	
+	.column {
+		float: left;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	
+	.column.full {width: 100%;}
+	.column.two-thirds { width: 66.7%; }
+	.column.half { width: 50%; }
+	.column.third { width: 33.3%; }
+	.column.fourth { width: 25%; }
+	.column.flow-opposite { float: right; }
 	
 }
 
-.point .point-title {
-	font-size: 1.25rem;
+@media (min-width: 1024px) {
+	html { font-size: 120%; }
 }
 
-.ion-music-note,
-.ion-radio-waves,
-.ion-iphone {
-	color: rgb(233,50,177);
-	font-size: 5rem;
+.clearfix::before,
+.clearfix::after {
+   content: " ";
+   display: table;
 }
 
-
+.clearfix::after {
+   clear: both;
+}
 
 
 
