@@ -11,19 +11,19 @@ body.landing {
 	background-size: cover;
 }
 
-.hero-content  hero-title {
+.hero-content .hero-title {
 	position: absolute;
 	top: 40%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
-	transform: translate(-50%);
+	transform: translateY(-50%);
 	width: 100%;
 	text-align: center;
 	font-size: 4rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 0.5rem;
-	text-shadow: 1px 1px 0px rgb(58,23,63)
+	text-shadow: 1px 1px 0px rgb(58,23,63);
 }
 
 .selling-points {
