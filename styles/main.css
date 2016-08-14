@@ -6,7 +6,7 @@
 
 html {
 	height: 100%;
-	font-size: 100%
+	font-size: 100%;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
 .navbar {
 	position: relative;
 	padding: 0.5rem;
+	height: 100px; /*added to stay aligned with link-container*/
 	background-color: rgba(101,18,95, 0.5);
 	z-index: 1;
 	
@@ -39,6 +40,7 @@ body {
 	height: 100px;
 	color: white;
 	text-decoration: none;
+	
 }
 
 .links-container .navbar-link {
@@ -55,6 +57,7 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
+	
 }
 
 .links-container .navbar-link:hover {
@@ -64,7 +67,7 @@ body {
 .links-container .navbar-link:active {
 	color: rgb(233,50,117);
 	background-color: white;
-	z-index: 0; /*added so navbar container doesnt overlap hero container*/
+	/*z-index: 0; /*added so navbar container doesnt overlap hero container*/
 	
 }
 
