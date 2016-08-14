@@ -9,7 +9,7 @@ body.landing {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	z-index: 1;/*added so navbar container doesnt overlap hero container*/
+	/*z-index: 1;/*added so navbar container doesnt overlap hero container*/
 }
 
 .hero-content .hero-title {
