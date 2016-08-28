@@ -78,10 +78,14 @@ var setCurrentAlbum = function(album) {
 };
 
 var findParentByClassName = function(element, targetClass) {
-	//console.log(element, 222222)
-    if (element) {
+	console.log(element, element.parentElement, targetClass)
+	if (!element.parentElement.className){
+		alert('No parent found')
+	}else if (!targetClass.parentElement.className){
+		alert('No parent found with that class name')
+	}else if (element) {
         var currentParent = element.parentElement;
-		console.log(currentParent.className, targetClass, 555555)
+		//console.log(currentParent.className, currentParent, 555555)
         while (currentParent.className != targetClass && currentParent.className !== null) {
             currentParent = currentParent.parentElement;
         }
@@ -91,7 +95,7 @@ var findParentByClassName = function(element, targetClass) {
 
 
 var getSongItem = function(element) {
-	console.log(element.className)
+	//console.log(element.className)
     switch (element.className) {
         case 'album-song-button':
         case 'ion-play':
@@ -157,6 +161,7 @@ window.onload = function(){
 					 songItem.innerHTML = songItemNumber;
 				 }
 		});
+		
 		songRows[i].addEventListener('click', function(event) {
              // Event handler call
 			clickHandler(event.target);
