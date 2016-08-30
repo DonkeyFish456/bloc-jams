@@ -4,6 +4,7 @@ body.album {
      background-attachment: fixed;
      background-position: center center;
      background-size: cover;
+	 padding-bottom: 250px;
  }
  
  .album-cover-art {
