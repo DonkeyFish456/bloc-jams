@@ -53,7 +53,19 @@ var createSongRow = function(songNumber, songName, songLength) {
 		+ '  <td class="song-item-duration">' + songLength + '</td>'
 		+ '</tr>'
 		;
-	return $(template);
+	
+	var onHover = function(event) {
+		$(this).find('.song-item-number').empty().addClass('album-song-button ion-play span')
+	};
+	
+	var offHover = function(event) {
+		$(this).find('.song-item-number').removeClass('album-song-button ion-play').text(songNumber)
+	};
+	
+	var $row = $(template);
+	$row.find('.song-item-number').click(clickHandler);
+	$row.hover(onHover, offHover);
+	return $row;
 };
 
 
@@ -93,7 +105,7 @@ var findParentByClassName = function(element, targetClass) {
 	}
 };
 
-
+/*
 var getSongItem = function(element) {
 	console.log(element.className)
     switch (element.className) {
@@ -112,7 +124,7 @@ var getSongItem = function(element) {
             return;
     }  
 };
-
+*/
 
  var clickHandler = function(targetElement) {
 	 var songItem = getSongItem(targetElement);
